@@ -193,7 +193,7 @@ uis.directive('uiSelect',
         if (appendToBody !== undefined ? appendToBody : uiSelectConfig.appendToBody) {
           scope.$watch('$select.open', function(isOpen) {
             if (isOpen) {
-              positionDropdown();
+              $timeout(positionDropdown);
             } else {
               resetDropdown();
             }
